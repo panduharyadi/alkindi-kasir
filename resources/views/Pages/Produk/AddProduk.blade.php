@@ -8,10 +8,13 @@
             Tambah Produk
         </div>
         <div class="card-body">
-            <form action="{{ route('store') }}" method="post">
+            <form action="{{ route('store') }}" method="POST">
                 @csrf
                 <div class="form-group">             
                     <input type="text" class="form-control" id="nama_barang" name="nama_barang" placeholder="Nama Produk">
+                </div>
+                <div class="form-group">             
+                    <input type="text" class="form-control" id="kode_barang" name="kode_barang" placeholder="Kode Produk">
                 </div>
                 <div class="input-group mb-3">
                     <select class="custom-select" id="satuan" name="satuan">
@@ -38,6 +41,12 @@
                 </div>
                 <div class="form-group">
                     <input type="date" class="form-control" id="tgl_kadaluarsa" name="tgl_kadaluarsa" placeholder="tanggal kadaluarsa">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="keterangan" name="keterangan" placeholder="keterangan">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="info" name="info" placeholder="info">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" id="harga" name="harga" placeholder="harga">
