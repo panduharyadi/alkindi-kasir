@@ -15,7 +15,18 @@ return new class extends Migration
     {
         Schema::create('produk_models', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('kode_barang');
+            $table->string('satuan');
+            $table->timestamp('tgl_masuk');
+            $table->string('nama_barang');
+            $table->integer('stok_dus');
+            $table->integer('stok_strip');
+            $table->integer('total_stock');
+            $table->integer('total_isi');
+            $table->timestamp('tgl_kadaluarsa')->nullable();
+            $table->string('keterangan');
+            $table->string('info');
+            $table->string('harga');
         });
     }
 

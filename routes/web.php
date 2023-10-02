@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProdukController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,8 @@ Route::get('/', function () {
 Route::get('/test', function() {
     return view('layout.layouts');
 });
+
+// Routes Produk
+Route::get('/produk', [ProdukController::class, 'index'])->name('produk');
+Route::get('/addProduk', [ProdukController::class, 'create'])->name('addProduk');
+Route::post('/store', [ProdukController::class, 'store'])->name('store');

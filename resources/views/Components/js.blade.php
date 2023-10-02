@@ -31,3 +31,11 @@
 <script src="{{ asset('assets/dist/js/demo.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{ asset('assets/dist/js/pages/dashboard.js') }}"></script>
+
+
+{{-- Data table --}}
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+
+<script>
+  let table = new DataTable('#myTable');
+</script>
